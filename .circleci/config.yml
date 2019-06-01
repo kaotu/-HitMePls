@@ -8,12 +8,12 @@ jobs:
     -checkout
     -run:
       name: install dependencies
-      command:
+      command: |
         python3 -m venv ENV
         . ENV/bin/activate
         pip install -r requirements.txt
     -run:
        name: run unit tests
-       command:
+       command: |
          . ENV/bin/activate
          cd hit_me_please && python manage.py test
