@@ -2,17 +2,17 @@ version: 2
 jobs:
   build:
   docker:
-    -image:circleci/python:3.7
+    - image:circleci/python:3.7
   working_directory: ~/hitme
   steps:
-    -checkout
-    -run:
+    - checkout
+    - run:
       name: install dependencies
       command: |
         python3 -m venv ENV
         . ENV/bin/activate
         pip install -r requirements.txt
-    -run:
+    - run:
        name: run unit tests
        command: |
          . ENV/bin/activate
