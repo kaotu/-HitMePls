@@ -1,2 +1,2 @@
-# -HitMePls
+# HitMePls
 CI/CD Workshop@Pronto
