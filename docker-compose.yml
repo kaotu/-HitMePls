@@ -2,6 +2,6 @@ version: "3.3"
 
 services:
   app:
-    image: kaotu/hitme:v3
+    image: kaotu/hitme:live
     ports: 
      - 80:8000
