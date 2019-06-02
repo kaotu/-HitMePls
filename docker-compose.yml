@@ -5,7 +5,3 @@ services:
     image: kaotu/hitme:v3
     ports: 
      - 80:8000
-
-
-
-
