@@ -27,9 +27,14 @@ jobs:
               docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
               docker push kaotu/hitme:live
 
+      - add_ssh_keys:
+          fingerprints:
+          - "SHA256:bGPhkHXYqiPFM/mcEmbFtpakm3AWheiFNvtQ/baa6o0"
+
       - run:
           name: deploy
           command: |
             . ENV/bin/activate
             cd ansible
             ansible-playbook -i hosts deploy.yml --extra-vars "project_path=~/Desktop/myProject/HitMePls"
+           
