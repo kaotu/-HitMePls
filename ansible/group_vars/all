@@ -1,4 +1,4 @@
 ansible_ssh_user: kaotu
 ansible_python_interpreter: /usr/bin/python3
-ansible_ssh_private_key_file: /c/Users/kao-t/Desktop/kaotuprivate.ppk 
+ansible_ssh_private_key_file: ~/Desktop/myProject/HitMePls/ansible/id_rsa 
 username: kaotu
