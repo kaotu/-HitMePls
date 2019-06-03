@@ -19,7 +19,7 @@ jobs:
             . ENV/bin/activate
             cd hit_me_please && python manage.py test
 
-      - run: 
+      - run:
           name: build and push image
           command: 
               docker build -t kaotu/hitme:live .
