@@ -29,7 +29,7 @@ jobs:
 
       - add_ssh_keys:
           fingerprints:
-            - "MD5:60:9d:fa:65:a1:c6:3d:29:87:c0:ae:48:0e:34:5c:42"
+            - "60:9d:fa:65:a1:c6:3d:29:87:c0:ae:48:0e:34:5c:42"
 
       - run:
           name: deploy
