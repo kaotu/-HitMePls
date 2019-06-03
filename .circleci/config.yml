@@ -21,7 +21,14 @@ jobs:
 
       - run:
           name: build and push image
-          command: 
+          command: | 
               docker build -t kaotu/hitme:live .
-              docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
+              docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
               docker push kaotu/hitme:live
+
+      - run:
+          name: deploy
+          command: |
+            . ENV/bin/activate
+            cd ansible
+            ansible-playbook -i hosts deploy.yml --extra-vars "project_path=~/hitme"
