@@ -1,4 +1,0 @@
-- name: deploy hit me app
-  hosts: web
-  roles:
-    - deploy
