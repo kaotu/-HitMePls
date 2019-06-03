@@ -1,0 +1,4 @@
+- name: deployment of web
+  hosts: web
+  roles:
+    - deploy
