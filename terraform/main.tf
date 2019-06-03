@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = "${file("pronto-27148182f0eb.json")}"
+  credentials = "${file("pronto-2dda7f5f08f9.json")}"
   project     = "pronto-242218"
   region      = "asia-southeast1"
   zone        = "asia-southeast1-c"
@@ -7,7 +7,7 @@ provider "google" {
 
 
 resource "google_compute_instance" "tf_instance" {
-  name         = "tf-instance-${count.index}"
+  name         = "hitme-${count.index}"
   machine_type = "n1-standard-1"
   count        =  1
 
@@ -19,7 +19,7 @@ resource "google_compute_instance" "tf_instance" {
   }
 
   metadata = {
-    sshKeys = "kaotu:${file("id_rsa.pub")}"
+    sshKeys = "kaotu:${file("kaotukey.pub")}"
   }
 
   network_interface {
@@ -27,7 +27,7 @@ resource "google_compute_instance" "tf_instance" {
     access_config  {}
   }
 
-  tags = ["my-web"]
+  tags = ["http-server"]
 }
 
   output "ip" {
