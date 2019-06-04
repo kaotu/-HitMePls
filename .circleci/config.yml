@@ -36,5 +36,4 @@ jobs:
           command: |
             . ENV/bin/activate
             cd ansible
-            ansible-playbook -i hosts deploy.yml --extra-vars "project_path=~/Desktop/myProject/HitMePls"
-           
+            ansible-playbook -i hosts deploy.yml --extra-vars "project_path=~/hitme"           
