@@ -1,6 +1,6 @@
 - name: upload docker compose file
   copy:
-    src: "[{ project_path }]/docker-compose.yml"
+    src: "{{ project_path }}/docker-compose.yml"
     dest: "docker-compose.yml"
 
 - name: pull docker image
