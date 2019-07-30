@@ -21,7 +21,7 @@ mccabe==0.6.1
 msgpack==0.6.1
 pycparser==2.19
 pylint==2.2.2
-python-engineio==3.3.0
+python-engineio==3.8.2.post1
 python-socketio==3.1.2
 PyYAML==5.1
 pyzmq==17.1.2
